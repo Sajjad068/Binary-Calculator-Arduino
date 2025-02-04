@@ -1,0 +1,17 @@
+[wokwi]
+version = 1
+firmware = 'sketch.ino.hex'
+elf = 'sketch.ino.elf'
+rfc2217ServerPort = 4000
+
+
+[board]
+type = "uno"
+
+[sketch]
+file = "sketch.ino"
+
+[dependencies]
+arduino-libraries = [
+  "LiquidCrystal_I2C"
+]

@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "author": "alik",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 58.2, "left": 306.6, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "LCD_Viewer",
+      "top": 390.4,
+      "left": 120.8,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "button0",
+      "top": 217.4,
+      "left": 0,
+      "attrs": { "label": "0" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "button1",
+      "top": 284.6,
+      "left": 0,
+      "attrs": { "label": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "buttonParClose",
+      "top": 131,
+      "left": -115.2,
+      "attrs": { "label": ")", "color": "blue" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "buttonParOpen",
+      "top": 131,
+      "left": -220.8,
+      "attrs": { "label": "(", "color": "blue" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "ButtonPlus",
+      "top": 188.6,
+      "left": -220.8,
+      "attrs": { "label": "+", "color": "grey" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "ButtonMinus",
+      "top": 188.6,
+      "left": -115.2,
+      "attrs": { "label": "-", "color": "grey" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "ButtonDiv",
+      "top": 246.2,
+      "left": -115.2,
+      "attrs": { "label": "/", "color": "blue" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "ButtonMulti",
+      "top": 255.8,
+      "left": -220.8,
+      "attrs": { "label": "*", "color": "blue" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "ButtonEqual",
+      "top": 313.4,
+      "left": -220.8,
+      "attrs": { "label": "=", "color": "green" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "BackSpace",
+      "top": 313.4,
+      "left": -115.2,
+      "attrs": { "label": "BackSpace", "color": "white" }
+    }
+  ],
+  "connections": [
+    [ "LCD_Viewer:GND", "uno:GND.1", "black", [ "h-28.8", "v-393.6", "h326.1" ] ],
+    [ "uno:5V", "LCD_Viewer:VCC", "red", [ "v19.1", "h-178.6", "v-28.8", "h-105.6" ] ],
+    [ "uno:A4", "LCD_Viewer:SDA", "green", [ "v38.3", "h-255", "v48", "h-172.8" ] ],
+    [ "uno:A5", "LCD_Viewer:SCL", "blue", [ "v57.5", "h-427.7", "v172.5" ] ],
+    [ "button0:1.r", "uno:2", "gold", [ "v-9.6", "h192.2", "v-153.6" ] ],
+    [ "button0:2.r", "uno:GND.1", "white", [ "h125", "v-220.6", "h230.1" ] ],
+    [ "button1:1.r", "uno:3", "green", [ "v-67.2", "h211.4", "v-163.2" ] ],
+    [ "button1:2.r", "uno:GND.1", "cyan", [ "h125", "v-124.6", "h172.5" ] ],
+    [ "buttonParClose:1.r", "uno:5", "cyan", [ "v-163.2", "h269" ] ],
+    [ "buttonParOpen:1.r", "uno:4", "purple", [ "v-38.4", "h77", "v-144", "h297.6" ] ],
+    [
+      "buttonParOpen:2.r",
+      "uno:GND.1",
+      "green",
+      [ "h19.4", "v-67", "h86.4", "v-105.6", "h163.2" ]
+    ],
+    [ "ButtonPlus:1.r", "uno:6", "gold", [ "v-86.4", "h125", "v-124.8", "h230.4" ] ],
+    [ "ButtonMinus:1.r", "uno:7", "blue", [ "v-11", "h43.4", "v-201.6", "h201.6" ] ],
+    [
+      "ButtonMulti:1.r",
+      "uno:8",
+      "green",
+      [ "h19.4", "v-163.2", "h115.2", "v-115.2", "h499.2", "v76.8" ]
+    ],
+    [ "ButtonDiv:1.r", "uno:9", "green", [ "v5.8", "h33.8", "v-278.4", "h182.4" ] ],
+    [
+      "ButtonEqual:1.r",
+      "uno:10",
+      "green",
+      [ "v0", "h19.4", "v-230.4", "h86.4", "v-105.6", "h201.6" ]
+    ],
+    [ "BackSpace:1.r", "uno:11", "green", [ "v-6.2", "h24.2", "v-326.4", "h172.8" ] ],
+    [ "buttonParClose:2.r", "uno:GND.1", "green", [ "h19.4", "v-172.6", "h153.6" ] ],
+    [ "ButtonPlus:2.r", "uno:GND.1", "gold", [ "h19.4", "v-115", "h105.6", "v-115.2", "h144" ] ],
+    [ "ButtonMinus:2.r", "uno:GND.1", "cyan", [ "h24.2", "v-231.6", "h144" ] ],
+    [ "ButtonDiv:2.r", "uno:GND.1", "purple", [ "h24.2", "v-291.6", "h144" ] ],
+    [
+      "ButtonMulti:2.r",
+      "uno:GND.1",
+      "gold",
+      [ "h19.4", "v-182.2", "h105.6", "v-115.2", "h144" ]
+    ],
+    [
+      "ButtonEqual:2.r",
+      "uno:GND.1",
+      "violet",
+      [ "h19.4", "v-249.4", "h86.4", "v-105.6", "h163.2" ]
+    ],
+    [ "BackSpace:2.r", "uno:GND.1", "blue", [ "h24.2", "v-351.6", "h144" ] ]
+  ],
+  "dependencies": {}
+}
